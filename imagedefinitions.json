@@ -1,6 +1,6 @@
 [
-  {
-    "name": "test-helloworld-ecr",
-    "imageUri": "014498634993.dkr.ecr.us-east-1.amazonaws.com/hello-world-ecr-private:latest"
-  }
+    {
+        "name": "test-helloworld-ecr",
+        "imageUri": "014498634993.dkr.ecr.us-east-1.amazonaws.com/hello-world-ecr-private:latest"
+    }
 ]
