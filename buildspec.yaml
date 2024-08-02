@@ -1,4 +1,4 @@
- version: 0.2
+version: 0.2
 
 phases:
   pre_build:
@@ -26,9 +26,9 @@ phases:
       - ls -al
       - echo Checking the content of imagedefinitions.json
       - cat imagedefinitions.json
+
 artifacts:
   files:
     - appspec.json
     - imagedefinitions.json
   discard-paths: yes
- 
