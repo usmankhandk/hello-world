@@ -1,12 +1,12 @@
- version: 0.2
+version: 0.2
 
 phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
       - aws --version
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 776940409242.dkr.ecr.us-east-1.amazonaws.com
-      - REPOSITORY_URI=776940409242.dkr.ecr.us-east-1.amazonaws.com/nodeexample
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 014498634993.dkr.ecr.us-east-1.amazonaws.com
+      - REPOSITORY_URI=014498634993.dkr.ecr.us-east-1.amazonaws.com/hello-world-ecr-private
       - IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
   build:
     commands:
@@ -26,9 +26,8 @@ phases:
       - ls -al
       - echo Checking the content of imagedefinitions.json
       - cat imagedefinitions.json
+
 artifacts:
   files:
-    - appspec.json
     - imagedefinitions.json
   discard-paths: yes
- 
