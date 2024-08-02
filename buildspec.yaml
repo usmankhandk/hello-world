@@ -6,7 +6,7 @@ phases:
       - echo Logging in to Amazon ECR...
       - aws --version
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 014498634993.dkr.ecr.us-east-1.amazonaws.com
-      - 014498634993.dkr.ecr.us-east-1.amazonaws.com/hello-world-ecr-private
+      - REPOSITORY_URI=014498634993.dkr.ecr.us-east-1.amazonaws.com/hello-world-ecr-private
       - IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
   build:
     commands:
@@ -31,4 +31,3 @@ artifacts:
   files:
     - imagedefinitions.json
   discard-paths: yes
-
