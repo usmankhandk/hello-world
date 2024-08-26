@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "echo \"Build script running...\""
+    "build": "mkdir -p build-output && echo \"Build script running...\" > build-output/build.log"
   },
   "keywords": [],
   "author": "",
@@ -14,4 +14,3 @@
     "express": "^4.19.2"
   }
 }
-
